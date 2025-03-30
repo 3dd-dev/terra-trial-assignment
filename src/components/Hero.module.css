@@ -1,0 +1,97 @@
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 1.6vw, 32px);
+  overflow: hidden;
+}
+
+.hero h1,
+.hero p {
+  z-index: 50;
+  width: 584px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.hero p {
+  width: 60%;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 3.3vw, 64px);
+  font-weight: bold;
+  line-height: clamp(31px, 3.6vw, 73px);
+  letter-spacing: 1px;
+}
+
+.bghero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroshape1,
+.heroshape2 {
+  position: absolute;
+  width: calc(100vw / 3);
+}
+
+.heroshape1 {
+  left: 0;
+  bottom: 0;
+}
+
+.heroshape2 {
+  right: 0;
+  top: 0;
+}
+
+.heroLink {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+  box-sizing: border-box;
+  padding-inline: 40px;
+  padding-block: 16px;
+  background-color: #189b5c;
+  line-height: 28px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  width: fit-content;
+  z-index: 50;
+  transition: 0.5s background-color;
+}
+
+.heroLink:hover {
+  background-color: #f78bd8;
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+  .hero {
+    height: calc(1100vw / 32);
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1032px) {
+  .hero {
+    height: calc(1100vw / 22);
+  }
+}
+
+@media (max-width: 766px) {
+  .hero {
+    height: calc(1100vw / 12);
+  }
+}

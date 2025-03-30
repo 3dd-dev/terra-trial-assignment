@@ -1,0 +1,67 @@
+.introCard {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: calc(200vw / 32);
+  gap: 0;
+  background-color: #f7f8f4;
+}
+
+.innerIntroCard {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.introCard .innerIntroCard:nth-child(1) {
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: clamp(40px, 4vw, 80px);
+  gap: clamp(12px, 1.25vw, 24px);
+  background-color: #ffffff;
+  height: fit-content;
+}
+
+.innerIntroCard img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.pill {
+  position: absolute;
+  top: clamp(10px, 1vw, 16px);
+  right: clamp(10px, 1vw, 16px);
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: bold;
+  background-color: var(--main-color);
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 100px;
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (min-width: 767px) and (max-width: 1032px) {
+  .introCard {
+    padding: calc(200vw / 22);
+    gap: 0;
+  }
+}
+
+@media (max-width: 766px) {
+  .introCard {
+    padding: calc(100vw / 12);
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .introCard {
+    background-color: var(--main-text);
+  }
+
+  .introCard .innerIntroCard:nth-child(1) {
+    background-color: #242424;
+  }
+}
