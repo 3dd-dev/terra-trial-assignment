@@ -13,7 +13,7 @@ To run this project on your local machine, please follow these steps:
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd terra-trial
+    cd terra-trial-assignment
     ```
 
 3.  **Install dependencies:**
